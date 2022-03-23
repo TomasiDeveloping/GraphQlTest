@@ -3,11 +3,7 @@ using GraphQL.Server;
 using GraphQL.Types;
 using GraphQlTest.Data;
 using GraphQlTest.Interfaces;
-using GraphQlTest.Mutation;
-using GraphQlTest.Query;
-using GraphQlTest.Schema;
 using GraphQlTest.Services;
-using GraphQlTest.Type;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,17 +12,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddTransient<IProduct, ProductService>();
+builder.Services.AddTransient<IMenu, MenuService>();
+builder.Services.AddTransient<ISubMenu, SubMenuService>();
+builder.Services.AddTransient<IReservation, ReservationService>();
 
 builder.Services.AddDbContext<GraphQlDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
-builder.Services.AddTransient<ProductType>();
-builder.Services.AddTransient<ProductQuery>();
-builder.Services.AddTransient<ProductMutation>();
-builder.Services.AddTransient<ISchema, ProductSchema>();
+
 
 builder.Services.AddGraphQL(options =>
 {
