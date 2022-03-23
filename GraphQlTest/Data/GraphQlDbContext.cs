@@ -7,7 +7,6 @@ namespace GraphQlTest.Data
     {
         public GraphQlDbContext(DbContextOptions<GraphQlDbContext> options) : base(options)
         {
-            
         }
 
         public DbSet<Menu> Menus { get; set; }

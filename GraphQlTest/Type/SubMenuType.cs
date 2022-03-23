@@ -3,7 +3,7 @@ using GraphQlTest.Models;
 
 namespace GraphQlTest.Type
 {
-    public class SubMenuType : ObjectGraphType<SubMenu>
+    public sealed class SubMenuType : ObjectGraphType<SubMenu>
     {
         public SubMenuType()
         {

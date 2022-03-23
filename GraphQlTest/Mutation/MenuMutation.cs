@@ -13,10 +13,7 @@ namespace GraphQlTest.Mutation
             Field<MenuType>("createMenu", arguments: new QueryArguments(new QueryArgument<MenuInputType>
             {
                 Name = "menu"
-            }), resolve: context =>
-            {
-                return menuService.AdMenu(context.GetArgument<Menu>("menu"));
-            });
+            }), resolve: context => menuService.AdMenu(context.GetArgument<Menu>("menu")));
         }
     }
 }

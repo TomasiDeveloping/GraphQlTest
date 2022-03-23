@@ -6,9 +6,9 @@ namespace GraphQlTest.Mutation
     {
         public RootMutation()
         {
-            Field<MenuMutation>("menuMutation", resolve: context => new {});
-            Field<SubMenuMutation>("subMenuMutation", resolve: context => new { });
-            Field<ReservationMutation>("reservationMutation", resolve: context => new { });
+            Field<MenuMutation>("menuMutation", resolve: _ => new {});
+            Field<SubMenuMutation>("subMenuMutation", resolve: _ => new { });
+            Field<ReservationMutation>("reservationMutation", resolve: _ => new { });
         }
     }
 }

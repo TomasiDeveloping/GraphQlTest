@@ -6,9 +6,9 @@ namespace GraphQlTest.Query
     {
         public RootQuery()
         {
-            Field<MenuQuery>("menuQuery", resolve: context => new { });
-            Field<SubMenuQuery>("subMenuQuery", resolve: context => new { });
-            Field<ReservationQuery>("reservationQuery", resolve: context => new { });
+            Field<MenuQuery>("menuQuery", resolve: _ => new { });
+            Field<SubMenuQuery>("subMenuQuery", resolve: _ => new { });
+            Field<ReservationQuery>("reservationQuery", resolve: _ => new { });
         }
     }
 }

@@ -3,7 +3,7 @@ using GraphQlTest.Models;
 
 namespace GraphQlTest.Type
 {
-    public class ReservationType : ObjectGraphType<Reservation>
+    public sealed class ReservationType : ObjectGraphType<Reservation>
     {
         public ReservationType()
         {

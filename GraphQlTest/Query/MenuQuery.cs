@@ -10,10 +10,7 @@ namespace GraphQlTest.Query
         public MenuQuery(IMenu menuService)
         {
             Field<ListGraphType<MenuType>>("menu", 
-                resolve: context =>
-            {
-                return menuService.GetMenus();
-            });
+                resolve: _ => menuService.GetMenus());
         }
     }
 }

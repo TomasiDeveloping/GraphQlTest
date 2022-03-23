@@ -11,7 +11,7 @@ namespace GraphQlTest.Type
             Field(m => m.Id);
             Field(m => m.Name);
             Field(m => m.ImageUrl);
-            Field<ListGraphType<SubMenuType>>("submenus", resolve: context => { return subMenuService.GetSubMenus(context.Source.Id); });
+            Field<ListGraphType<SubMenuType>>("submenus", resolve: context => subMenuService.GetSubMenus(context.Source.Id));
         }
     }
 }

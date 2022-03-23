@@ -12,10 +12,7 @@ namespace GraphQlTest.Mutation
         {
             Field<SubMenuType>("createSubMenu",
                 arguments: new QueryArguments(new QueryArgument<SubMenuInputType> {Name = "subMenu"}), 
-                resolve: context =>
-                {
-                    return subMenuService.AddSubMenu(context.GetArgument<SubMenu>("subMenu"));
-                });
+                resolve: context => subMenuService.AddSubMenu(context.GetArgument<SubMenu>("subMenu")));
         }
     }
 }

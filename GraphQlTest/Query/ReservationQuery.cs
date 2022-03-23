@@ -8,10 +8,7 @@ namespace GraphQlTest.Query
     {
         public ReservationQuery(IReservation reservationService)
         {
-            Field<ListGraphType<ReservationType>>("reservations", resolve: context =>
-            {
-                return reservationService.GetReservations();
-            });
+            Field<ListGraphType<ReservationType>>("reservations", resolve: _ => reservationService.GetReservations());
         }
     }
 }
