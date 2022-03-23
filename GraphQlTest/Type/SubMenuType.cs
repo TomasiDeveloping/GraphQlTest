@@ -10,7 +10,7 @@ namespace GraphQlTest.Type
             Field(sb => sb.Id);
             Field(sb => sb.Name);
             Field(sb => sb.Description);
-            Field(sb => sb.IamgeUrl);
+            Field(sb => sb.ImageUrl);
             Field(sb => sb.Price);
             Field(sb => sb.MenuId);
         }

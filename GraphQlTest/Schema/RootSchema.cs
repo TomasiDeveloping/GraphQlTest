@@ -1,4 +1,5 @@
-﻿using GraphQlTest.Query;
+﻿using GraphQlTest.Mutation;
+using GraphQlTest.Query;
 
 namespace GraphQlTest.Schema
 {
@@ -7,6 +8,7 @@ namespace GraphQlTest.Schema
         public RootSchema(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             Query = serviceProvider.GetRequiredService<RootQuery>();
+            Mutation = serviceProvider.GetRequiredService<RootMutation>();
         }
     }
 }
